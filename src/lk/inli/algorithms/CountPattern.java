@@ -56,6 +56,7 @@ public class CountPattern {
 		
 		int noOfPatternRepeats = totalPattenLength / pattern.length();
 		int charsInOneCompletePattern = (noOfPatternRepeats > 0) ? CountPattern.countChars(pattern, c) : 0;
+		System.out.println("No of patterns " + pattern + " repeats: " + noOfPatternRepeats);
 		
 		return ((charsFromStartIndexToEndOfPattern + charsFromStartOfPatternToEndIndex) + (charsInOneCompletePattern * noOfPatternRepeats));
 	}
