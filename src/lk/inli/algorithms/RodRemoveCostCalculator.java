@@ -24,16 +24,12 @@ public class RodRemoveCostCalculator {
 
 	static int calculateCost(int n, List<String> pairs) {
 		List<Set> groups = new ArrayList<>();
-		Set allRods = new HashSet<>();
 		long totalCost = 0;
 		
 		for (String pair : pairs) {
 			String rod1 = "" + pair.charAt(0);
 			String rod2 = "" + pair.charAt(2);
-			
-			allRods.add(rod1);
-			allRods.add(rod2);
-			
+						
 			boolean isGroupExist = false;
 			for(Set group : groups) {
 				if (null != group && group.size() > 0 && (group.contains(rod1) || group.contains(rod2))) {
