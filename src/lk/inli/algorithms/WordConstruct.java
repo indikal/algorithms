@@ -1,16 +1,20 @@
 package lk.inli.algorithms;
 
+/*
+ * Create a word from the given word which is lexicographically immediate higher one.
+ * If there is no any such words return "no answer"
+*/
 public class WordConstruct {
 
 	public static void main(String[] args) {
-		/*System.out.println("lmno: " + biggerIsGreater("lmno"));
+		System.out.println("lmno: " + biggerIsGreater("lmno"));
 		System.out.println("dcba: " + biggerIsGreater("dcba"));
 		System.out.println("dcbb: " + biggerIsGreater("dcbb"));
 		System.out.println("abdc: " + biggerIsGreater("abdc"));
 		System.out.println("abcd: " + biggerIsGreater("abcd"));
-		System.out.println("fedcbabcd: " + biggerIsGreater("fedcbabcd"));*/
+		System.out.println("fedcbabcd: " + biggerIsGreater("fedcbabcd"));
 		
-		/*System.out.println("ba".equals(biggerIsGreater("ab")));
+		System.out.println("ba".equals(biggerIsGreater("ab")));
 		System.out.println("no answer".equals(biggerIsGreater("bb")));
 		System.out.println("hegf".equals(biggerIsGreater("hefg")));
 		System.out.println("dhkc".equals(biggerIsGreater("dhck")));
@@ -39,9 +43,9 @@ public class WordConstruct {
 		System.out.println("no answer".equals(biggerIsGreater("zwqnnjhfccba")));
 		System.out.println("dtwfgnvmippxcpppjpsyfzhvwnehthaylypapifheb".equals(biggerIsGreater("dtwfgnvmippxcpppjpsyfzhvwnehthaylypapifhbe")));
 		System.out.println("xqopdmvkppfbsoybf".equals(biggerIsGreater("xqopdmvkppfbsofyb")));
-		System.out.println("hihjflgiyruykigzarpxmhwnpbhfyrhdkcawripafpxhjugcjsgwijzhlauxlutpylcqlsaauveehodlyjowssuim".equals(biggerIsGreater("hihjflgiyruykigzarpxmhwnpbhfyrhdkcawripafpxhjugcjsgwijzhlauxlutpylcqlsaauveehodlyjowssmui")));*/
+		System.out.println("hihjflgiyruykigzarpxmhwnpbhfyrhdkcawripafpxhjugcjsgwijzhlauxlutpylcqlsaauveehodlyjowssuim".equals(biggerIsGreater("hihjflgiyruykigzarpxmhwnpbhfyrhdkcawripafpxhjugcjsgwijzhlauxlutpylcqlsaauveehodlyjowssmui")));
 		
-		/*System.out.println("zedawdvyyfumwpupuinbdbfndyehircmylbaowuptgwm".equals(biggerIsGreater("zedawdvyyfumwpupuinbdbfndyehircmylbaowuptgmw")));
+		System.out.println("zedawdvyyfumwpupuinbdbfndyehircmylbaowuptgwm".equals(biggerIsGreater("zedawdvyyfumwpupuinbdbfndyehircmylbaowuptgmw")));
 		System.out.println("no answer".equals(biggerIsGreater("zyyxwwtrrnmlggfeb")));
 		System.out.println("ocsmerkgidvddsazqxjbqlrrxcotrnfvtnlutlfcafdlwiismslaytqdbvlmcpapfbmzxmftrkkqvkpflxpezzapllerxyzlfc".equals(biggerIsGreater("ocsmerkgidvddsazqxjbqlrrxcotrnfvtnlutlfcafdlwiismslaytqdbvlmcpapfbmzxmftrkkqvkpflxpezzapllerxyzlcf")));
 		System.out.println("biehzcmjckznhwrfgglverxsjepquxz".equals(biggerIsGreater("biehzcmjckznhwrfgglverxsezxuqpj")));
@@ -195,9 +199,9 @@ public class WordConstruct {
 		System.out.println("no answer".equals(biggerIsGreater("zzzzyyxwwwwwvuutttssrrrrrqonnnnnmllkkkhhggffeddddaaa")));
 		System.out.println("no answer".equals(biggerIsGreater("zyyyyxxwvvuutttsssrrqppooonnmmljjjiiihgffeeeddaa")));
 		System.out.println("qadkpegvcxqedtcakzryzeon".equals(biggerIsGreater("qadkpegvcxqedtcakzryzeno")));
-		System.out.println("hexxtmqzalisfoltvdtrdbydqumlhxjwmstzcswmeczyenpxxjistirucdbjlvwtxssmczkacwoqt".equals(biggerIsGreater("hexxtmqzalisfoltvdtrdbydqumlhxjwmstzcswmeczyenpxxjistirucdbjlvwtxssmczkactwqo")));*/
+		System.out.println("hexxtmqzalisfoltvdtrdbydqumlhxjwmstzcswmeczyenpxxjistirucdbjlvwtxssmczkacwoqt".equals(biggerIsGreater("hexxtmqzalisfoltvdtrdbydqumlhxjwmstzcswmeczyenpxxjistirucdbjlvwtxssmczkactwqo")));
 		System.out.println("no answer".equals(biggerIsGreater("c")));
-		/*System.out.println("bfogvbblhrxvqcpnbgsjtalvxbwwrenforjtqzwxajyhnmleaqhrgmriyy".equals(biggerIsGreater("bfogvbblhrxvqcpnbgsjtalvxbwwrenforjtqzwxajyhnmleaqhrgmiyyr")));
+		System.out.println("bfogvbblhrxvqcpnbgsjtalvxbwwrenforjtqzwxajyhnmleaqhrgmriyy".equals(biggerIsGreater("bfogvbblhrxvqcpnbgsjtalvxbwwrenforjtqzwxajyhnmleaqhrgmiyyr")));
 		System.out.println("tboiediibzdhmbcvkhhzxaecqhidipfznuy".equals(biggerIsGreater("tboiediibzdhmbcvkhhzxaecqhidipfyzun")));
 		System.out.println("no answer".equals(biggerIsGreater("zzyyyyxxwwwwwwvvuuttssssrrrqqqppppooonnnmmmmlkkjjiiiiiihhhgggggffffeeeeedbbbaaaaa")));
 		System.out.println("qnaho".equals(biggerIsGreater("qhona")));
@@ -240,7 +244,7 @@ public class WordConstruct {
 		System.out.println("petilfdqgwzaxpmbboaqknpfzfyfzfknvyhvfppsuhbnabanbbyjfxsulfgbzwmqaycgob".equals(biggerIsGreater("petilfdqgwzaxpmbboaqknpfzfyfzfknvyhvfppsuhbnabanbbyjfxsulfgbzwmqaycgbo")));
 		System.out.println("bwsvyszdxgokozbwuleporgmnownohvywxtbsulwvfalipxnymclqpxpkywejjklsuqaqvzjssjzqejhmogpkeaz".equals(biggerIsGreater("bwsvyszdxgokozbwuleporgmnownohvywxtbsulwvfalipxnymclqpxpkywejjklsuqaqvzjssjzqejhmogpkaze")));
 		System.out.println("slhvjimtzctgmowtujjclbwzucqjxzdmamgjdolbtokhiugonehlulazozmaiadwuqmpudiiaakdsrpjoqzhskobwjfjpyrwqje".equals(biggerIsGreater("slhvjimtzctgmowtujjclbwzucqjxzdmamgjdolbtokhiugonehlulazozmaiadwuqmpudiiaakdsrpjoqzhskobwjfjpyrwqej")));
-		System.out.println("oqqpozlzkcggpsddcnzwmbdbxdkcstooiwnfkgnggzemcopqatvryeyooehfdovfkqwnluurkncrpofcqboqgvoslpwujo".equals(biggerIsGreater("oqqpozlzkcggpsddcnzwmbdbxdkcstooiwnfkgnggzemcopqatvryeyooehfdovfkqwnluurkncrpofcqboqgvoslpwouj")));*/
+		System.out.println("oqqpozlzkcggpsddcnzwmbdbxdkcstooiwnfkgnggzemcopqatvryeyooehfdovfkqwnluurkncrpofcqboqgvoslpwujo".equals(biggerIsGreater("oqqpozlzkcggpsddcnzwmbdbxdkcstooiwnfkgnggzemcopqatvryeyooehfdovfkqwnluurkncrpofcqboqgvoslpwouj")));
 
 	}
 

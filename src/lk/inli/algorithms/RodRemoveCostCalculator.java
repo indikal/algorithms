@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/*
+ * Cost of removing single rod if sqrt(1) and cost of removing a group of n rods if sqrt(n).
+ * Always use the ceiling value. Input: total no of rods and all pairs of rods.
+*/
 public class RodRemoveCostCalculator {
 
 	public static void main(String[] args) {
