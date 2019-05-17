@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MatrixRotation {
     // Complete the matrixRotation function below.
-    public void matrixRotation(List<List<Integer>> matrix, int r) {
+    static void matrixRotation(List<List<Integer>> matrix, int r) {
         long start = System.currentTimeMillis();
         System.out.println(matrix);
 
@@ -17,13 +17,13 @@ public class MatrixRotation {
 
         //matrix.get(0).set(0, 2);
 
-        Integer[][] arrayMatrix = new Integer[m][n];
+        /*Integer[][] arrayMatrix = new Integer[m][n];
         int k = 0;
         for (List<Integer> list : matrix) {
             Integer[] array = list.toArray(new Integer[n]);
             arrayMatrix[k] = array;
             k++;
-        }
+        }*/
 
         /*
         1  2  3  4
@@ -34,7 +34,36 @@ public class MatrixRotation {
         for (int rotation=0; rotation<r; rotation++) {
 
             for (int i = 0; i < noOfLoops; i++) {
-                Integer temp = arrayMatrix[i][i]; //keep the first element
+                Integer temp = matrix.get(i).get(i); //keep the first element
+
+                int x;
+                for (x = i; x < (matrix.get(i).size() - (i + 1)); x++) {
+                    matrix.get(i).set(x, matrix.get(i).get(x + 1));
+                }
+                //System.out.println("x: " + x);
+                //x--; //adjust the loop increment
+                int y;
+                for (y = i; y < (matrix.size() - (i + 1)); y++) {
+                    matrix.get(y).set(x, matrix.get(y + 1).get(x));
+                }
+                //System.out.println("y: " + y);
+
+                int z;
+                for (z = x; z > i; z--) {
+                    matrix.get(y).set(z, matrix.get(y).get(z - 1));
+                }
+                //System.out.println("z: " + z);
+
+                int a;
+                for (a = y; a > (i + 1); a--) {
+                    //System.out.println("a: " + a);
+                    matrix.get(a).set(z, matrix.get(a - 1).get(z));
+                }
+
+                //now copy the first element to remaining element
+                matrix.get(a).set(z, temp);
+
+                /*Integer temp = arrayMatrix[i][i]; //keep the first element
 
                 int x;
                 for (x = i; x < (arrayMatrix[i].length - (i + 1)); x++) {
@@ -61,21 +90,21 @@ public class MatrixRotation {
                 }
 
                 //now copy the first element to remaining element
-                arrayMatrix[a][z] = temp;
+                arrayMatrix[a][z] = temp;*/
 
             }
         }
 
-        this.printArray(arrayMatrix);
+        printArray(matrix);
         System.out.println("Time taken: " + (System.currentTimeMillis() - start));
     }
 
-    private void printArray(Integer[][] arrayMatrix) {
-        for (Integer[] arr : arrayMatrix) {
-            for (Integer val : arr) {
+    static void printArray(List<List<Integer>> matrix) {
+        for (List<Integer> list : matrix) {
+            for (Integer val : list) {
                 System.out.print(val + " ");
             }
-            System.out.println();
+            System.out.println();//list.toString().replace("[", "").replace("]","").replaceAll(",",""));
         }
     }
 
