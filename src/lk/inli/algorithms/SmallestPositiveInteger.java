@@ -1,9 +1,7 @@
 package lk.inli.algorithms;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedHashSet;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -18,21 +16,26 @@ public class SmallestPositiveInteger {
             }
         }*/
 
-        LinkedHashSet<Integer> hashSet = new LinkedHashSet<>();
+        /*LinkedHashSet<Integer> hashSet = new LinkedHashSet<>();
         for (int a : A) {
             if (a > 0) {
                 hashSet.add(a);
             }
-        }
+        }*/
 
-        ArrayList<Integer> array = new ArrayList<>(hashSet);
+        List<Integer> array = Arrays.stream(A)
+                .parallel()
+                .filter(a -> a > 0)
+                .sorted()
+                .boxed()
+                .collect(Collectors.toList());// new ArrayList<>(hashSet);
 
         if (array.isEmpty()) {
             System.out.println("Collection is empty");
             return 1;
         }
 
-        array.sort(Comparator.naturalOrder());
+        //array.sort(Comparator.naturalOrder());
         System.out.println(array);
 
         int index = 0;
@@ -53,7 +56,7 @@ public class SmallestPositiveInteger {
             }
         }
 
-        return array.get(index-1)+1;
+        return array.get(array.size()-1)+1;
     }
 
     public static void main(String[] args) {
