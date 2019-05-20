@@ -91,4 +91,26 @@ public class MagicSquare {
 		
 		return arr;
 	}
+
+	// Complete the formingMagicSquare function below.
+	static int formingMagicSquare2(int[][] s) {
+		int totalCost = 0;
+
+		int M = s.length * (s.length * s.length + 1) / 2; //Magic constant
+
+		if (s[1][1] != 5) {
+			totalCost = Math.abs(s[1][1] - 5);
+			s[1][1] = 5;
+		}
+
+		for (int i=0; i<s.length; i++) {
+			int M_row_i = Arrays.stream(s[i]).reduce(0, Integer::sum);
+
+			if (M_row_i != M) {
+				//if (s[i][0] == 5)
+			}
+		}
+
+		return -1;
+	}
 }
